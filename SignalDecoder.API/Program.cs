@@ -1,6 +1,8 @@
 
 using SignalDecoder.Application.Interfaces;
 using SignalDecoder.Application.Services;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace SignalDecoder.API
 {
@@ -12,8 +14,25 @@ namespace SignalDecoder.API
 
             // Add services to the container.
             builder.Services.AddScoped<IDeviceGenertorService, DeviceGeneratorService>();
+            builder.Services.AddScoped<ISignalSimulatorService, SignalSimulatorService>();
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+                    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+                });
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+            });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -27,10 +46,11 @@ namespace SignalDecoder.API
                 app.UseSwaggerUI();
             }
 
+            app.UseCors();
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
