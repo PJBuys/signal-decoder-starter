@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalDecoder.API", "SignalDecoder.API\SignalDecoder.API.csproj", "{B528A82A-6F1C-4052-98A5-29F81B73164C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalDecoder.Domain", "SignalDecoder.Domain\SignalDecoder.Domain.csproj", "{EF38C155-4B37-4EE4-9B89-1D0A8376E721}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalDecoder.Application", "SignalDecoder.Application\SignalDecoder.Application.csproj", "{A1178B00-D0B0-4A9C-BA8A-4CD1D5F0C0AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalDecoder.API", "SignalDecoder.API\SignalDecoder.API.csproj", "{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,18 +19,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Debug|x64.Build.0 = Debug|Any CPU
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Debug|x86.Build.0 = Debug|Any CPU
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Release|x64.ActiveCfg = Release|Any CPU
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Release|x64.Build.0 = Release|Any CPU
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Release|x86.ActiveCfg = Release|Any CPU
-		{B528A82A-6F1C-4052-98A5-29F81B73164C}.Release|x86.Build.0 = Release|Any CPU
 		{EF38C155-4B37-4EE4-9B89-1D0A8376E721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EF38C155-4B37-4EE4-9B89-1D0A8376E721}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF38C155-4B37-4EE4-9B89-1D0A8376E721}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -55,6 +43,18 @@ Global
 		{A1178B00-D0B0-4A9C-BA8A-4CD1D5F0C0AE}.Release|x64.Build.0 = Release|Any CPU
 		{A1178B00-D0B0-4A9C-BA8A-4CD1D5F0C0AE}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1178B00-D0B0-4A9C-BA8A-4CD1D5F0C0AE}.Release|x86.Build.0 = Release|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Debug|x64.Build.0 = Debug|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Debug|x86.Build.0 = Debug|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Release|x64.ActiveCfg = Release|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Release|x64.Build.0 = Release|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Release|x86.ActiveCfg = Release|Any CPU
+		{5C7D9BDE-C55B-40FC-BD3F-E29DB791AD0E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

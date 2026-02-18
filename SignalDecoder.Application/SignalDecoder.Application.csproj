@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SignalDecoder.Domain\SignalDecoder.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
