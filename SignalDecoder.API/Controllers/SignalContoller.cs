@@ -9,9 +9,11 @@ namespace SignalDecoder.API.Controllers
     public class SignalContoller : ControllerBase
     {
         private readonly ISignalSimulatorService _signalSimulatorService;
-        public SignalContoller(ISignalSimulatorService signalSimulatorService)
+        private readonly ISignalDecoderService _signalDecoderService;
+        public SignalContoller(ISignalSimulatorService signalSimulatorService, ISignalDecoderService SignalDecoderService)
         {
             _signalSimulatorService = signalSimulatorService;
+            _signalDecoderService = SignalDecoderService;
         }
 
         [HttpPost("simulate")]
@@ -21,5 +23,11 @@ namespace SignalDecoder.API.Controllers
             return Ok(result);
         }
 
+        [HttpPost("decode")]
+        public IActionResult DecodeSignal([FromBody] DecodeRequest decodeRequest)
+        {
+            DecodeResponse response = _signalDecoderService.Decode(decodeRequest);
+            return Ok(response);
+        }
     }
 }

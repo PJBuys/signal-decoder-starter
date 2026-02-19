@@ -15,6 +15,7 @@ namespace SignalDecoder.API
             // Add services to the container.
             builder.Services.AddScoped<IDeviceGenertorService, DeviceGeneratorService>();
             builder.Services.AddScoped<ISignalSimulatorService, SignalSimulatorService>();
+            builder.Services.AddScoped<ISignalDecoderService, SignalDecoderService>();
 
             builder.Services.AddControllers()
                 .AddJsonOptions(options =>
