@@ -32,7 +32,7 @@ namespace SignalDecoder.Application.Services
                             MatchesReceived = true
                         },
                     },
-                    SolutionCount = 1,
+                    SolutionCount = 0,
                     SolveTimeMs = stopwatch.ElapsedMilliseconds
                 };
             }
