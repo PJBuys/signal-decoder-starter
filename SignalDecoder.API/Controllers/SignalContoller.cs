@@ -32,7 +32,6 @@ namespace SignalDecoder.API.Controllers
         /// Decodes a received signal to identify which devices were transmitting.
         /// Returns all valid combinations of transmitting devices.
         /// </summary>
-        /// 
         [HttpPost("decode")]
         [ProducesResponseType(typeof(DecodeResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(object), StatusCodes.Status400BadRequest)]
