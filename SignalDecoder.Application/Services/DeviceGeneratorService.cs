@@ -1,4 +1,5 @@
 ﻿using SignalDecoder.Application.Interfaces;
+using SignalDecoder.Application.Validation;
 
 namespace SignalDecoder.Application.Services
 {
@@ -6,7 +7,7 @@ namespace SignalDecoder.Application.Services
     {
         public Dictionary<string, int[]> GenerateDevices(int count, int signalLength, int maxStrength)
         {
-            //add validation for input parameters
+            RequestValidation.ValidateGenerateParams(count, signalLength, maxStrength);
 
             Dictionary<string, int[]> devices = new Dictionary<string, int[]>();
 

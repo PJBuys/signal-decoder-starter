@@ -1,4 +1,5 @@
 ﻿using SignalDecoder.Application.Interfaces;
+using SignalDecoder.Application.Validation;
 using SignalDecoder.Domain.Entities;
 using System.Diagnostics;
 
@@ -8,6 +9,9 @@ namespace SignalDecoder.Application.Services
     {
         public DecodeResponse Decode(DecodeRequest decodeRequest)
         {
+            RequestValidation.ValidateDecodeRequest(
+            decodeRequest.Devices, decodeRequest.ReceivedSignal, decodeRequest.Tolerance);
+
             Stopwatch stopwatch = Stopwatch.StartNew();
 
             int[] recieved = decodeRequest.ReceivedSignal;

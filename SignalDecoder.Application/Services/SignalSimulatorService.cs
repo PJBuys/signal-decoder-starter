@@ -1,4 +1,5 @@
 ﻿using SignalDecoder.Application.Interfaces;
+using SignalDecoder.Application.Validation;
 using SignalDecoder.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace SignalDecoder.Application.Services
         private readonly Random _random = new();
         public SimulateResponse Simulate(Dictionary<string, int[]> devices)
         {
+            RequestValidation.ValidateSimulateRequest(devices);
+
             int totalDevices = devices.Count;
             int signalLength = devices.First().Value.Length;
 
